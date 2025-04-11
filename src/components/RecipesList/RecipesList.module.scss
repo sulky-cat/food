@@ -1,0 +1,17 @@
+@import "@src/styles/settings";
+
+.title {
+   font-weight: 600;
+   @include adaptiveValue("font-size", 38, 30);
+   line-height: 110%;
+   color: #0f172a;
+
+   &:not(:last-child) {
+      margin-bottom: rem(24);
+   }
+}
+.recipes {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+   gap: rem(24);
+}

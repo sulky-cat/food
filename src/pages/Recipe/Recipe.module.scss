@@ -1,0 +1,7 @@
+@import "@src/styles/settings";
+
+.decsription {
+   &:not(:last-child) {
+      margin-bottom: rem(56);
+   }
+}

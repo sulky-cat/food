@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./settings.scss";
+
+html,
+body {
+   min-width: $minWidth + px;
+}
+body {
+   font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+   font-size: rem(16);
+   line-height: 1;
+   color: #000;
+}
+#root {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   overflow: clip;
+
+   > main {
+      flex: 1 1 auto;
+   }
+}
+.footer {
+   padding-block: rem(10);
+}

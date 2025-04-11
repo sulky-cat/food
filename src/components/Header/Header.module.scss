@@ -1,0 +1,27 @@
+@import "@src/styles/settings";
+
+.header {
+   padding-block: rem(10);
+}
+.container {
+   @media (min-width: $bp3) {
+      display: flex;
+      align-items: center;
+      column-gap: rem(20);
+   }
+}
+.logo {
+   img {
+      @include adaptiveValue("width", 150, 80);
+   }
+
+   @media (max-width: $bp3) {
+      display: block;
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+   }
+}
+.search {
+   flex: 1 1 auto;
+}

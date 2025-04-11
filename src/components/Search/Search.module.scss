@@ -1,0 +1,51 @@
+@import "@src/styles/settings";
+
+.form {
+   display: flex;
+   column-gap: rem(16);
+
+   @media (max-width: $bp4) {
+      column-gap: rem(10);
+   }
+}
+.input {
+   flex-grow: 1;
+   position: relative;
+   border: var(--border);
+   border-radius: var(--border-radius);
+   overflow: hidden;
+
+   // .inputElement
+   &Element {
+      width: 100%;
+      height: 100%;
+      padding: rem(10) rem(14) rem(10) rem(48);
+
+      @media (max-width: $bp4) {
+         padding-left: rem(37);
+         padding-right: rem(7);
+      }
+   }
+
+   // .inputIcon
+   &Icon {
+      position: absolute;
+      top: 50%;
+      left: rem(14);
+      font-size: rem(24);
+      color: rgba(15, 23, 42, 0.5);
+      translate: 0 -50%;
+      pointer-events: none;
+
+      @media (max-width: $bp4) {
+         left: rem(7);
+      }
+   }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+   display: none;
+}
